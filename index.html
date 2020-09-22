@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Juego de Tenis</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!--Primera pantalla press start-->
-    <section class="seccionVisible" id="fase1">
-        <div class="general">
-            <button>Llevame </button>
+    <section class="seccionVisible seccionVisible1" id="fase1">
+        <div class="general general1">
+            <button>START</button>
         
         </div>
     </section>
 
-    <!--Primera pantalla seleccion personajes-->
-    <section class="seccionVisible" id="fase2" style="display: none;">
-        <div class="general">
+    <!--Segunda pantalla seleccion personajes-->
+    <section class="seccionVisible seccionVisible2" id="fase2" style="display: none">
+        <div class="general general2">
+            <button>Seleccion Jugador</button>
         
         </div>
     </section>
-    <!--Enfrentamiento-->
-    <section class="seccionVisible" id="fase3">
-        <div class="general">
+    <!--Tercera Pantalla Enfrentamiento-->
+    <section class="seccionVisible seccionVisible3" id="fase3" style="display: none">
+        <div class="general general3">
+            <button>Golpe Player 1</button>
+            <button>Golpe Player 2</button>
         
+        </div>
+    </section>
+
+    <!--Cuarta Pantalla Muestra ganador-->
+    <section class="seccionVisible seccionVisible4" id="fase4" style="display: none">
+        <div class="general general4">
+            <button>Nuevo Partido</button>
+            
         </div>
     </section>
 
