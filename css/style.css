@@ -3,10 +3,31 @@
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.sup{
+    height: 20%;
+    width: 100%;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cent{
+    height: 60%;
+    width: 100%;
+    background-color: grey;
+}
+
+.inf{
+    height: 20%;
+    width: 100%;
+    background-color: hotpink;
+}
 .general{
     width: 50em;
     height: 30em;
