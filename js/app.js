@@ -13,3 +13,14 @@ const cambioPantalla = (valor) => {
 
     }
 }
+
+class Jugador{
+    constructor(nombre, ataque, defensa, ganar){
+        this.nombre = nombre;
+        this.ataque = ataque;
+        this.defensa = defensa;
+        this.ganar = ganar;
+    }
+
+    recibePunto()
+}
