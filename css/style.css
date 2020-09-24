@@ -28,11 +28,9 @@ body{
     margin-bottom: 1em;
 }
 .sup3{
-    height: 10%;
+    height: 20%;
 }
-.fotoVersus{
-    height: 30em;
-}
+
 }
 .logo{
     height: 10em;
@@ -51,7 +49,34 @@ body{
     align-items: center; 
     flex-direction: row;
 }
-
+.cent3{
+    background-color: #69dfe1;
+}
+.centIzq{
+    height: 24.2em;
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.centCent{
+    height: 24.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white ;}
+.fotoVersus{
+    height: 24.2em;
+}
+.centDer{
+    height: 24.2em;
+    width: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
 .col1{
     height: 30em;
     width: 20em;

@@ -27,6 +27,13 @@ class Jugador{
         this.puntos = puntos;
     }
 
+    saque() {
+        this.puntos += this.ataque; 
+    }
+    resto() {
+
+    }
+
 
 }
 
@@ -57,9 +64,14 @@ const selectPersonaje = (nombre) =>{
     }
     if (players.length === 2){
         cambioPantalla(3);
-        console.log(players)
+        pintarPlayers()
+        console.log(players);
     }
-   
-
-
 } 
+
+const pintarPlayers = () =>{
+    console.log("Player 1 es: ", players[0]);
+    console.log("Player 2 es: ", players[1]);
+    let player1 += `<div class=
+
+}
