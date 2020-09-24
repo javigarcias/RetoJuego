@@ -41,24 +41,24 @@ let players = [];
 const selectPersonaje = (nombre) =>{
     console.log(nombre);
     
-        switch (nombre){
-            case "bela":
-                players.push(bela);
-                break;
-            case "lebron":
-                players.push(lebron);
-                break;
-            case "paquito":
-                players.push(paquito);
-                break;
-            case "lamperti":
-                players.push(lamperti);
-                break;
-        }
-        if (players.length === 2){
-            cambioPantalla(3);
-            console.log(players)
-        }
+    switch (nombre){
+        case "bela":
+            players.push(bela);
+            break;
+        case "lebron":
+            players.push(lebron);
+            break;
+        case "paquito":
+            players.push(paquito);
+            break;
+        case "lamperti":
+            players.push(lamperti);
+            break;
+    }
+    if (players.length === 2){
+        cambioPantalla(3);
+        console.log(players)
+    }
    
 
 

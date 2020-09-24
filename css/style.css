@@ -27,6 +27,13 @@ body{
     font-size: 2em;
     margin-bottom: 1em;
 }
+.sup3{
+    height: 10%;
+}
+.fotoVersus{
+    height: 30em;
+}
+}
 .logo{
     height: 10em;
 
@@ -48,7 +55,6 @@ body{
 .col1{
     height: 30em;
     width: 20em;
-    background-color: brown;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +63,6 @@ body{
 .col3{
     height: 30em;
     width: 20em;
-    background-color: brown;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +71,6 @@ body{
 .col2{
     height: 32em;
     width: 20em;
-    background-color: coral;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,9 +149,6 @@ body{
 
 
 
-.general3{
-    background-color: red;
-}
 
 .general4{
     background-color: green;
