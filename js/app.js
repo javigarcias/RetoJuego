@@ -1,5 +1,4 @@
 const cambioPantalla = (valor) => {
-    console.log("Entra en funcion")
     let faseDestino = "fase" + valor;
 
     let fases = ["fase1", "fase2", "fase3", "fase4"];
