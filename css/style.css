@@ -42,10 +42,12 @@ body{
     display: flex; 
     justify-content: center;  
     align-items: center; 
+    flex-direction: row;
 }
 
 .col1{
     height: 30em;
+    width: 20em;
     background-color: brown;
     display: flex;
     flex-direction: column;
@@ -54,6 +56,7 @@ body{
 }
 .col3{
     height: 30em;
+    width: 20em;
     background-color: brown;
     display: flex;
     flex-direction: column;
