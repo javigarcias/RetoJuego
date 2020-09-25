@@ -20,11 +20,12 @@ const cambioPantalla = (valor) => {
 
 //Creacion de jugadores
 class Jugador{
-    constructor(nombre, ataque, defensa, puntos){
+    constructor(nombre, ataque, defensa, puntos, img){
         this.nombre = nombre;
         this.ataque = ataque;
         this.defensa = defensa;
         this.puntos = puntos;
+        this.img = img;
     }
 
     saque() {
@@ -37,41 +38,65 @@ class Jugador{
 
 }
 
-const bela = new Jugador ("Bela", 200, 200, 800);
-const paquito = new Jugador ("Paquito", 300, 150, 1200);
-const lebron = new Jugador ("Lebron", 400, 200, 1100);
-const lamperti = new Jugador ("Lebron", 100, 50, 200 );
+const bela = new Jugador ("Bela", 200, 200, 800, "../img/bela2.jpg");
+const paquito = new Jugador ("Paquito", 300, 150, 1200, "../img/paquito2.jpg");
+const lebron = new Jugador ("Lebron", 400, 200, 1100, "../img/lebron2.jpg");
+const lamperti = new Jugador ("Lamperti", 100, 50, 200, "../img/lamperti2.jpg");
+
 
 let players = [];
+let player1 = "";
+let player2 = "";
 
+const playerSelect1 = document.getElementById("p1Select");
+const playerSelect2 = document.getElementById("p2Select");
+const nameP1 = document.getElementById("nameP1");
+const nameP2 = document.getElementById("nameP2")
 
 const selectPersonaje = (nombre) =>{
     console.log(nombre);
-    
     switch (nombre){
         case "bela":
             players.push(bela);
+            pintarPlayers(bela);
             break;
         case "lebron":
             players.push(lebron);
+            pintarPlayers(lebron);
             break;
         case "paquito":
             players.push(paquito);
+            pintarPlayers(paquito);
             break;
         case "lamperti":
             players.push(lamperti);
+            pintarPlayers(lamperti);
             break;
     }
     if (players.length === 2){
         cambioPantalla(3);
-        pintarPlayers()
-        console.log(players);
+     
     }
 } 
 
-const pintarPlayers = () =>{
+const pintarPlayers = (player) =>{
+    if (players.length < 2){
+        playerSelect1.style.backgroundImage = `url(${player.img})`;
+        nameP1.innerHTML = `PLAYER 1: ${player.nombre}`;
+    }else{
+        playerSelect2.style.backgroundImage = `url(${player.img})`;
+        nameP2.innerHTML = `PLAYER 2: ${player.nombre}`;
+    }
+}
+
+const desac
+/*const pintarPlayers = () =>{
     console.log("Player 1 es: ", players[0]);
     console.log("Player 2 es: ", players[1]);
-    let player1 += `<div class=
-
+    let player1 += `<div class= ;
 }
+
+const pintarPlayerSelec = () =>{
+    playerSelect1 += `<div=p1Select 
+}
+*/

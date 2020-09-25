@@ -60,6 +60,7 @@ body{
     align-items: center;
     background-color: white;
 }
+
 .centCent{
     height: 24.2em;
     display: flex;
@@ -77,6 +78,7 @@ body{
     align-items: center;
     background-color: white;
 }
+/*Seleccion Jugador 1*/
 .col1{
     height: 30em;
     width: 20em;
@@ -85,13 +87,21 @@ body{
     justify-content: center;
     align-items: center;
 }
-.col3{
-    height: 30em;
+.fotoPlayer1{
     width: 20em;
+    height: 20em;
+    background-color: white;
+}
+.player1{
+    height: 3em;
+    width: 13.2em;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #69dfe1;
+    border: 1px solid #69dfe1;
+    font-size: 1.5em;
+ 
 }
 .col2{
     height: 32em;
@@ -100,6 +110,33 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+} 
+
+/*Seleccion Jugador 2*/
+.col3{
+    height: 30em;
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player2{
+    height: 3em;
+    width: 13.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #69dfe1;
+    border: 1px solid #69dfe1;
+    font-size: 1.5em;
+ 
+}
+.fotoPlayer2{
+    width: 20em;
+    height: 20em;
+    background-color: white;
 }
 .jug1{
     height: 7.5em;
