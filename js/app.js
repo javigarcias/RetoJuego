@@ -1,3 +1,4 @@
+
 const cambioPantalla = (valor) => {
     let faseDestino = "fase" + valor;
 
@@ -9,14 +10,8 @@ const cambioPantalla = (valor) => {
 
     for(let pantalla of fases){
         document.getElementById(pantalla).style.display = "none";
-
     }
 }
-
-
-
-
-
 
 //Creacion de jugadores
 class Jugador{
@@ -28,14 +23,9 @@ class Jugador{
         this.img = img;
     }
 
-    saque() {
-        this.puntos += this.ataque; 
+    recibeSaque(valor) {
+        this.puntos -= (valor); 
     }
-    resto() {
-
-    }
-
-
 }
 
 const bela = new Jugador ("Bela", 200, 200, 800, "../img/bela2.jpg");
@@ -51,7 +41,8 @@ let player2 = "";
 const playerSelect1 = document.getElementById("p1Select");
 const playerSelect2 = document.getElementById("p2Select");
 const nameP1 = document.getElementById("nameP1");
-const nameP2 = document.getElementById("nameP2")
+const nameP2 = document.getElementById("nameP2");
+const boton2 = document.getElementById("boton2");
 
 const selectPersonaje = (nombre) =>{
     console.log(nombre);
@@ -74,8 +65,8 @@ const selectPersonaje = (nombre) =>{
             break;
     }
     if (players.length === 2){
-        cambioPantalla(3);
-     
+        disablePlayers();
+        document.getElementById("boton2").disabled = false ;  
     }
 } 
 
@@ -89,14 +80,12 @@ const pintarPlayers = (player) =>{
     }
 }
 
-const desac
-/*const pintarPlayers = () =>{
-    console.log("Player 1 es: ", players[0]);
-    console.log("Player 2 es: ", players[1]);
-    let player1 += `<div class= ;
+
+const disablePlayers = () =>{
+    document.getElementById("bela").style.pointerEvents = "none";
+    document.getElementById("paquito").style.pointerEvents = "none";
+    document.getElementById("lebron").style.pointerEvents = "none";
+    document.getElementById("lamperti").style.pointerEvents = "none"
 }
 
-const pintarPlayerSelec = () =>{
-    playerSelect1 += `<div=p1Select 
-}
-*/
+
