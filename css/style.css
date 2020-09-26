@@ -55,6 +55,9 @@ body{
 .centIzq{
     height: 24.2em;
     width: 20em;
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;

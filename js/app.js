@@ -96,19 +96,29 @@ const disablePlayers = () =>{
 }
 
 const sacar = (jugador) =>{
-    if (players[0].puntos > 0 || players[1].puntos > 0 ){
-        if (jugador === 1){
-            botonSaqueP1.style.display = "none";
-            botonSaqueP2.style.display = "block";
-            players[1].recibeSaque(players[0].ataque);
-            console.log(players[1].puntos);
-        }else{
-            botonSaqueP2.style.display = "none";
-            botonSaqueP1.style.display = "block";
-            players[0].recibeSaque(players[1].ataque);
-            console.log(players[0].puntos);
+    if (jugador === 1){
+        botonSaqueP1.style.display = "none";
+        botonSaqueP2.style.display = "block";
+        players[1].recibeSaque(players[0].ataque);
+        console.log(players[1].puntos);
+        if (players[1].puntos <= 0){
+            cambioPantalla(4);
+            console.log("Jugador 1 ha ganado")
+            players=[];
         }
     }else{
-        console.log("Partida terminada")
+        botonSaqueP2.style.display = "none";
+        botonSaqueP1.style.display = "block";
+        players[0].recibeSaque(players[1].ataque);
+        console.log(players[0].puntos);
+        if (players[0].puntos <= 0){
+            cambioPantalla(4);
+            console.log("Jugador 2 ha ganado");
+            players=[];
+        }
     }
+}
+
+const reiniciar = () =>{
+    window.location.reload();
 }
