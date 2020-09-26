@@ -57,18 +57,22 @@ const selectPersonaje = (nombre) =>{
         case "bela":
             players.push(bela);
             pintarPlayers(bela);
+            document.getElementById("bela").style.pointerEvents = "none";
             break;
         case "lebron":
             players.push(lebron);
             pintarPlayers(lebron);
+            document.getElementById("lebron").style.pointerEvents = "none";
             break;
         case "paquito":
             players.push(paquito);
             pintarPlayers(paquito);
+            document.getElementById("paquito").style.pointerEvents = "none";
             break;
         case "lamperti":
             players.push(lamperti);
             pintarPlayers(lamperti);
+            document.getElementById("lamperti").style.pointerEvents = "none"
             break;
     }
     if (players.length === 2){
