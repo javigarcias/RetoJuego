@@ -43,6 +43,8 @@ const playerSelect2 = document.getElementById("p2Select");
 const nameP1 = document.getElementById("nameP1");
 const nameP2 = document.getElementById("nameP2");
 const boton2 = document.getElementById("boton2");
+const p1Juega = document.getElementById("p1Juega");
+const p2Juega = document.getElementById("p2Juega");
 
 const selectPersonaje = (nombre) =>{
     console.log(nombre);
@@ -73,13 +75,14 @@ const selectPersonaje = (nombre) =>{
 const pintarPlayers = (player) =>{
     if (players.length < 2){
         playerSelect1.style.backgroundImage = `url(${player.img})`;
+        p1Juega.style.backgroundImage = `url(${player.img})`;
         nameP1.innerHTML = `PLAYER 1: ${player.nombre}`;
     }else{
         playerSelect2.style.backgroundImage = `url(${player.img})`;
+        p2Juega.style.backgroundImage =`url(${player.img})`;
         nameP2.innerHTML = `PLAYER 2: ${player.nombre}`;
     }
 }
-
 
 const disablePlayers = () =>{
     document.getElementById("bela").style.pointerEvents = "none";
@@ -88,4 +91,9 @@ const disablePlayers = () =>{
     document.getElementById("lamperti").style.pointerEvents = "none"
 }
 
+const saqueP1 = () =>{
 
+}
+const saqueP2 = () =>{
+    
+}

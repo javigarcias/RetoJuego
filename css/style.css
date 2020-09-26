@@ -66,7 +66,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white ;}
+}
+
 .fotoVersus{
     height: 24.2em;
 }
@@ -200,18 +201,4 @@ body{
     background-color: #69dfe1;
     color: #22346c;
     width: 6em;
-}
-.general{
-    width: 50em;
-    height: 30em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-.general4{
-    background-color: green;
 }
