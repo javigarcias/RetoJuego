@@ -49,6 +49,7 @@ const p1Juega = document.getElementById("p1Juega");
 const p2Juega = document.getElementById("p2Juega");
 const botonSaqueP1 = document.getElementById("botonSaqueP1");
 const botonSaqueP2 = document.getElementById("botonSaqueP2");
+const ganador = document.getElementById("ganador");
 
 const selectPersonaje = (nombre) =>{
     console.log(nombre);
@@ -103,8 +104,8 @@ const sacar = (jugador) =>{
         console.log(players[1].puntos);
         if (players[1].puntos <= 0){
             cambioPantalla(4);
+            pintarGanador(players[0])
             console.log("Jugador 1 ha ganado")
-            players=[];
         }
     }else{
         botonSaqueP2.style.display = "none";
@@ -113,10 +114,15 @@ const sacar = (jugador) =>{
         console.log(players[0].puntos);
         if (players[0].puntos <= 0){
             cambioPantalla(4);
+            pintarGanador(players[1])
             console.log("Jugador 2 ha ganado");
-            players=[];
         }
     }
+}
+
+const pintarGanador = (player) =>{
+    ganador.style.backgroundImage = `url(${player.img})`;
+
 }
 
 const reiniciar = () =>{
