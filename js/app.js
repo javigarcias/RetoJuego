@@ -23,9 +23,11 @@ class Jugador{
         this.img = img;
     }
 
-    recibeSaque(valor) {
-        this.puntos -= (valor); 
+    recibeSaque = (ataque) =>{
+        this.puntos -= ataque - this.defensa;
     }
+
+    
 }
 
 const bela = new Jugador ("Bela", 200, 200, 800, "../img/bela2.jpg");
@@ -35,8 +37,8 @@ const lamperti = new Jugador ("Lamperti", 100, 50, 200, "../img/lamperti2.jpg");
 
 
 let players = [];
-let player1 = "";
-let player2 = "";
+let player1 = players[0];
+let player2 = players[1];
 
 const playerSelect1 = document.getElementById("p1Select");
 const playerSelect2 = document.getElementById("p2Select");
@@ -45,6 +47,8 @@ const nameP2 = document.getElementById("nameP2");
 const boton2 = document.getElementById("boton2");
 const p1Juega = document.getElementById("p1Juega");
 const p2Juega = document.getElementById("p2Juega");
+const botonSaqueP1 = document.getElementById("botonSaqueP1");
+const botonSaqueP2 = document.getElementById("botonSaqueP2");
 
 const selectPersonaje = (nombre) =>{
     console.log(nombre);
@@ -91,9 +95,20 @@ const disablePlayers = () =>{
     document.getElementById("lamperti").style.pointerEvents = "none"
 }
 
-const saqueP1 = () =>{
-
-}
-const saqueP2 = () =>{
-    
+const sacar = (jugador) =>{
+    if (players[0].puntos > 0 || players[1].puntos > 0 ){
+        if (jugador === 1){
+            botonSaqueP1.style.display = "none";
+            botonSaqueP2.style.display = "block";
+            players[1].recibeSaque(players[0].ataque);
+            console.log(players[1].puntos);
+        }else{
+            botonSaqueP2.style.display = "none";
+            botonSaqueP1.style.display = "block";
+            players[0].recibeSaque(players[1].ataque);
+            console.log(players[0].puntos);
+        }
+    }else{
+        console.log("Partida terminada")
+    }
 }
