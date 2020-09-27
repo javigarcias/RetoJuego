@@ -30,10 +30,10 @@ class Jugador{
     
 }
 
-const bela = new Jugador ("Bela", 200, 200, 800, "../img/bela2.jpg");
-const paquito = new Jugador ("Paquito", 300, 150, 1200, "../img/paquito2.jpg");
-const lebron = new Jugador ("Lebron", 400, 200, 1100, "../img/lebron2.jpg");
-const lamperti = new Jugador ("Lamperti", 100, 50, 200, "../img/lamperti2.jpg");
+const bela = new Jugador ("Bela", 200, 200, 800, "img/bela2.jpg");
+const paquito = new Jugador ("Paquito", 300, 150, 1200, "img/paquito2.jpg");
+const lebron = new Jugador ("Lebron", 400, 200, 1100, "img/lebron2.jpg");
+const lamperti = new Jugador ("Lamperti", 100, 50, 200, "img/lamperti2.jpg");
 
 
 let players = [];
