@@ -52,6 +52,7 @@ const botonSaqueP2 = document.getElementById("botonSaqueP2");
 const ganador = document.getElementById("ganador");
 const puntosP1 = document.getElementById("puntosP1");
 const puntosP2 = document.getElementById("puntosP2");
+const textoGanador = document.getElementById("textoGanador");
 
 const selectPersonaje = (nombre) =>{
     console.log(nombre);
@@ -88,10 +89,13 @@ const pintarPlayers = (player) =>{
         playerSelect1.style.backgroundImage = `url(${player.img})`;
         p1Juega.style.backgroundImage = `url(${player.img})`;
         nameP1.innerHTML = `PLAYER 1: ${player.nombre}`;
+        puntosP1.innerHTML = `${player.puntos}`;
     }else{
         playerSelect2.style.backgroundImage = `url(${player.img})`;
         p2Juega.style.backgroundImage =`url(${player.img})`;
         nameP2.innerHTML = `PLAYER 2: ${player.nombre}`;
+        puntosP2.innerHTML = `${player.puntos}`;
+
     }
 }
 
@@ -107,24 +111,31 @@ const sacar = (jugador) =>{
         botonSaqueP1.style.display = "none";
         botonSaqueP2.style.display = "block";
         players[1].recibeSaque(players[0].ataque);
+        puntosP2.innerHTML = `${players[1].puntos}`;
+
         console.log(players[1].puntos);
         if (players[1].puntos <= 0){
             cambioPantalla(4);
             pintarGanador(players[0]);
+            textoGanador.innerHTML = `Partido ganado por: ${players[0].nombre}`;
             console.log("Jugador 1 ha ganado");
         }
     }else{
         botonSaqueP2.style.display = "none";
         botonSaqueP1.style.display = "block";
         players[0].recibeSaque(players[1].ataque);
+        puntosP1.innerHTML = `${players[0].puntos}`;
+
         console.log(players[0].puntos);
         if (players[0].puntos <= 0){
             cambioPantalla(4);
-            pintarGanador(players[1])
+            pintarGanador(players[1]);
+            textoGanador.innerHTML = `Partido ganado por: ${players[1].nombre}`;
             console.log("Jugador 2 ha ganado");
         }
     }
 }
+ 
 
 const pintarGanador = (player) =>{
     ganador.style.backgroundImage = `url(${player.img})`;

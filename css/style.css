@@ -57,6 +57,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    flex-direction: column;
 }
 .centIzq{
     height: 24.2em;
@@ -67,7 +68,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     margin-left: 2em;
 
 }
@@ -88,7 +88,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -106,7 +105,6 @@ body{
 .fotoPlayer1{
     width: 20em;
     height: 20em;
-    background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -155,7 +153,6 @@ body{
 .fotoPlayer2{
     width: 20em;
     height: 20em;
-    background-color: white;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -248,20 +245,49 @@ body{
 
 .supIzq3{
     width: 20em;
-    height: 4em;
+    height: 2em;
     background-color: #22346c;
     border-radius: 2em;
     border:0.2em solid #69dfe1;
     margin-right: 8em;
     color: #69dfe1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
 
 }
 .supDer3{
     width: 20em;
-    height: 4em;
+    height: 2em;
     background-color:#22346c;
     border-radius: 2em;
     border:0.2em solid #69dfe1;
     margin-left: 8em;
     color: #69dfe1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.textoGanador{
+    width: 22em;
+    height: 5em;
+    background-color: #22346c;
+    color: #69dfe1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+
+
+}
+.fotoGanador{
+    width: 21em;
+    height: 21em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
